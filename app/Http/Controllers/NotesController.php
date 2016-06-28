@@ -26,7 +26,15 @@ class NotesController extends Controller
     // $task->notes()->create($request->all());
     //     return back();
     // return $request->all();
-
+    }
+    public function edit(Note $notes)
+    {
+        return view('notes.edit', compact('notes'));
+    }
+    public function update(Request $request, Note $notes)
+    {
+        $notes->update($request->all());
+        return redirect('index');
     }
 
 }

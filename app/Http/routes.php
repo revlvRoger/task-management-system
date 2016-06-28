@@ -16,12 +16,15 @@
 //     $people = ['Roger','Jaeson','Brian'];
 //     return view('welcome', compact('people'));
 // });
-
-
 // Route::get('/', 'PagesController@home');
 // Route::get('any', 'PagesController@about');
 Route::get('index','TasksController@index');
 Route::get('index/{tasks}','TasksController@show');
 // post resquest...
 Route::post('index/{tasks}/notes','NotesController@store');
+
+Route::get('notes/{notes}/edit', 'NotesController@edit');
+//updating the notes id...
+Route::patch('notes/{notes}', 'NotesController@update');
+
 
