@@ -20,5 +20,8 @@ class TasksController extends Controller
         // $tasks = Task::find($tasks);
         return view('tasks.show', compact('tasks'));
     }
+    // public function add()
+    // {
 
+    // }
 }

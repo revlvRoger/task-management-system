@@ -1,4 +1,7 @@
-
+p {
+    font-size: 8pt;
+    color: #8d8d8d;
+}
 
 .row {
     /*border: 2px solid black;*/

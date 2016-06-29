@@ -10,9 +10,13 @@
                 <li class="list-group-item text-center">
                   {{--   <a href="/index/{{ $task->id }} ">{{ $task->title }}</a> --}}
                     <a href="{{ $task->path() }}"> {{ $task->title }} </a>
+                    <p>Date created: {{ $task->created_at }}</p>
                 </li>
             @endforeach
         </ul>
+        <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Add Task</button>
+        </div>
     </div>
 </div>
 @stop

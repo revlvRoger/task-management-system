@@ -17,15 +17,6 @@ class NotesController extends Controller
        $tasks->notes()->save($note);
        // redirect to this page
        return back();
-
-    // $note = new Note (['body' => $request->body]);
-    // $note->body = $request->body;
-    // $task->notes()->save($note);
-    // return back();
-    //
-    // $task->notes()->create($request->all());
-    //     return back();
-    // return $request->all();
     }
     public function edit(Note $notes)
     {
@@ -34,6 +25,17 @@ class NotesController extends Controller
     public function update(Request $request, Note $notes)
     {
         $notes->update($request->all());
+        return redirect('index');
+    }
+
+    public function destroy(Note $notes)
+    {
+        return view('notes.destroy', compact('notes'));
+    }
+    public function del(Request $request, Note $notes)
+    {
+        $notes = Note::find($notes->id);
+        $notes->delete();
         return redirect('index');
     }
 
