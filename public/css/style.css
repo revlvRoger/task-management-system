@@ -1,26 +1,168 @@
 p {
     font-size: 8pt;
-    color: #8d8d8d;
+    color: white;
+}
+hr {
+    border: 1px solid #808080;
+}
+body {
+    font-family: 'Montserrat';
+}
+.todo {
+    color: white;
+    text-align: center;
 }
 
-.row {
-    /*border: 2px solid black;*/
-}
 .border {
     margin-top: 50px;
     border-radius: 10px;
-    background: #cdcdcd;
-    box-shadow: 10px 10px 5px #888888;
+/*    background: rgba(0, 0, 0, 0.86);
+*/
+    background: rgba(4, 37, 47, 0.91);
+/*    border: 2px solid #808080;
+*/    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.btn {
+    float: right;
+    width: 100px;
+}
+img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 100%;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
 
 }
-i {
-    float: right;
-    margin-left: 10px;
-    margin-right: 10px  ;
-}
-/*a .fa-trash {
-    color: white;
-    padding: 8px;
+
+.list-group li {
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+    background-color: rgba(121, 121, 121, 0.44);
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    text-decoration: none;
+    list-style: none;
+    border: 1px solid #808080;
     border-radius: 5px;
-    background-color: #d9534f;
-}*/
+    line-height: 22px;
+
+}
+.list-group ul li a{
+    color: #FFFFFF;
+    font-size: 16pt;
+}
+.note-text {
+    color: white;
+    text-align: center;
+}
+.note-text span {
+    font-style: italic;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+.delete {
+    height: 20px;
+}
+.delete i {
+    float: right;
+    color: white;
+}
+.delete i:hover {
+    float: right;
+    color: red;
+}
+.button-del {
+    height: 20px;
+    margin-bottom: 10px;
+}
+.button-del i {
+    float: right;
+    color: white;
+}
+.button-edit a {
+    float: right;
+    color: white;
+    font-size: 10pt;
+    margin-top: 20px;
+}
+.button-edit a:hover {
+    color:#0072FF;
+    text-decoration: none;
+}
+ .red:hover {
+    color: red;
+}
+.title {
+    color: white;
+    font-size: 20pt;
+}
+.title:hover {
+    color: #00D0FF;
+    text-decoration: none;
+}
+
+.del:hover {
+    color:red;
+}
+h3 {
+    color: white;
+}
+
+
+
+
+
+
+
+/*welcome page*/
+.container {
+    width: 100%;
+}
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+.content {
+    margin-top: 100px;
+    opacity: 0.8;
+    color: white;
+    padding: 40px;
+    background: rgba(4, 37, 47, 0.91);
+    border-radius: 15px;
+    box-shadow: rgba(4, 37, 47, 0.91);
+}
+h4 {
+    color: white;
+    text-align: center;
+    font-size: 30pt;
+}
+.p {
+    color: white;
+    font-style: italic;
+    font-size: 20pt;
+    text-align: center;
+    line-height: 150%;
+}
+.btn-arrow {
+    padding: 15px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background: #808080;
+    border:none;
+    margin-left: 400px;
+}
+.btn-arrow:hover {
+    color: ;
+
+}

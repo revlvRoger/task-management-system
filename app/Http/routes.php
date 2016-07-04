@@ -11,9 +11,15 @@
 |
 */
 
-
+Route::get('welcome', 'TasksController@welcome');
 Route::get('index','TasksController@index');
-// Route::get('index/add','TasksController@add');
+Route::get('index/add','TasksController@view');
+Route::post('index','TasksController@store');
+
+Route::get('index/{tasks}/delete','TasksController@destroy');
+Route::delete('index/{tasks}', 'TasksController@del');
+
+
 
 Route::get('index/{tasks}','TasksController@show');
 // post resquest...
@@ -27,3 +33,5 @@ Route::get('notes/{notes}/destroy', 'NotesController@destroy');
 Route::delete('notes/{notes}', 'NotesController@del');
 
 
+Route::resource('todos', 'TodoController');
+Route::resource('authors', 'AuthorController');

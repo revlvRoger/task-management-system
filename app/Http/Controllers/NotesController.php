@@ -13,6 +13,7 @@ class NotesController extends Controller
     {
        $note = new Note;
        $note->body = $request->body;
+       $note->date = $request->date;
        // call the notes method(model) and save one
        $tasks->notes()->save($note);
        // redirect to this page
@@ -24,10 +25,10 @@ class NotesController extends Controller
     }
     public function update(Request $request, Note $notes)
     {
+        $tasks = new Task;
         $notes->update($request->all());
         return redirect('index');
     }
-
     public function destroy(Note $notes)
     {
         return view('notes.destroy', compact('notes'));

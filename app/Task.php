@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+    protected $fillable = ['title'];
+
     public function notes()
     {
         // relationship to the tasks table and notes table.....
@@ -16,5 +18,11 @@ class Task extends Model
     public function path()
     {
         return '/index/' . $this->id;
+    }
+    public function date()
+    {
+        $oldDate = date('Y-m-d H:i:s');
+        $newDate = date('l, F d, Y H:i a', strtotime($oldDate));
+        return $newDate;
     }
 }
