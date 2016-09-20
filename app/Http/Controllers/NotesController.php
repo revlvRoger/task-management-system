@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
 use App\Note;
 use App\Task;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
 class NotesController extends Controller
 {
+
     public function store(Request $request, Task $tasks)
     {
        $note = new Note;
@@ -29,15 +32,21 @@ class NotesController extends Controller
         $notes->update($request->all());
         return redirect('index');
     }
-    public function destroy(Note $notes)
+    public function destroy($notes)
     {
-        return view('notes.destroy', compact('notes'));
-    }
-    public function del(Request $request, Note $notes)
-    {
-        $notes = Note::find($notes->id);
-        $notes->delete();
+        DB::table('notes')->where('id', $notes)->delete();
         return redirect('index');
     }
+    // public function destroy(Note $notes)
+    // {
+    //     return view('notes.destroy', compact('notes'));
+    // }
+    // public function del(Request $request, Note $notes)
+    // {
+    //     $notes = Note::find($notes->id);
+    //     $notes->delete();
+    //     return redirect('index');
+    // }
+
 
 }

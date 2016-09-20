@@ -4,15 +4,13 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Task;
+use App\Note;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
 class TasksController extends Controller
 {
-    public function welcome()
-    {
-        return view('welcome');
-    }
     public function index()
     {
         // $tasks = DB::table('tasks')->get();
@@ -22,9 +20,14 @@ class TasksController extends Controller
     public function show(Task $tasks)
     {
         // $tasks = Task::find($tasks);
+        // $tasks = Task::with('notes')->get();
+        // return $tasks;
         return view('tasks.show', compact('tasks'));
+
     }
-    public function view()
+
+
+    public function create()
     {
         return view('tasks.add', compact('tasks'));
     }
@@ -39,18 +42,21 @@ class TasksController extends Controller
         // $tasks->save();
         return redirect('index');
     }
-
-
-    public function destroy(Task $tasks)
+    public function destroy($id)
     {
-        return view('tasks.delete', compact('tasks'));
-    }
-
-
-    public function del(Request $request, Task $tasks)
-    {
-        $tasks = Task::find($tasks->id);
-        $tasks->delete();
+        $task = DB::table('tasks')->where('id', $id);
+        $task->delete();
         return redirect('index');
     }
+
+
+
+    // public function del(Request $request, Task $tasks)
+    // {
+    //     $tasks = Task::find($tasks->id);
+    //     $tasks->delete();
+    //     $tasks->notes()->delete();
+    //     return redirect('index');
+    // }
+
 }

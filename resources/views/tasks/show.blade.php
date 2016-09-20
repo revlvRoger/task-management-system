@@ -3,7 +3,7 @@
 
  <div class="row">
     <div class="border col-md-6 col-md-offset-3">
-        <h3>{{ $tasks->title }}</h3>
+    <h3><a class="task-title" href="/index">{{ $tasks->title }}</a></h3>
         <p>Date created: {{$tasks->created_at->DiffForHumans()}}</p>
         <hr>
 
@@ -11,7 +11,7 @@
             @foreach ($tasks->notes as $note)
                 <li class="list-group-item">
                 <div class="button-del">
-                <a href="/notes/{{$note->id}}/destroy"><i class="del fa fa-times fa-1x" aria-hidden="true"></i></a>
+                <a href="/notes/{{$note->id}}/delete"><i class="del fa fa-times fa-1x" aria-hidden="true"></i></a>
                 </div>
                 <div class="note-text">
                     <span>" {{ $note->body }} "</span>
@@ -22,9 +22,6 @@
                     <div class="button-edit">
                         <a href="/notes/{{ $note->id }}/edit">Edit</a>
                     <div>
-
-{{--                     <a href="/notes/{{ $note->id }}/edit"><i class="edit fa fa-pencil fa-1x" aria-hidden="true"></i></a>
- --}}
                 </li>
             @endforeach
         </ul>

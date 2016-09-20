@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
- <div class="row">
+<div class="row">
     <div class="border col-md-6 col-md-offset-3">
         <h3>Add To Do</h3>
         <hr>

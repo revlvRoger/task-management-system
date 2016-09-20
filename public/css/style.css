@@ -45,7 +45,6 @@ img {
     border: 1px solid black;
     padding: 20px;
     margin-bottom: 20px;
-    height: 150px;
     background-color: rgba(121, 121, 121, 0.44);
     opacity: 0.8;
     filter: alpha(opacity=60);
@@ -89,11 +88,14 @@ img {
     float: right;
     color: white;
 }
+.button-edit {
+    height: 20px;
+    margin-top: 10px;
+}
 .button-edit a {
     float: right;
     color: white;
     font-size: 10pt;
-    margin-top: 20px;
 }
 .button-edit a:hover {
     color:#0072FF;
@@ -165,4 +167,81 @@ h4 {
 .btn-arrow:hover {
     color: ;
 
+}
+.task-title {
+    text-decoration: none;
+    color: white;
+}
+.task-title:hover {
+        color: #00D0FF;
+    text-decoration: none;
+}
+
+.login-wrapper {
+    width: 400px;
+    margin: 0 auto;
+/*    border: 2px solid red;
+*/    height: 150px;
+}
+
+.login {
+    margin-top: 20px;
+    height: 45px;
+
+}
+
+
+
+
+.log {
+    position: relative;
+}
+.log input{
+    text-indent: 40px;
+}
+.log .fa-user {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    font-size: 20px;
+    color: gray;
+    border-right: 2px solid gray;
+    border-radius: 2px;
+    padding-right: 5px;
+}
+
+.log .fa-lock {
+    position: absolute;
+    top: 80px;
+    left: 15px;
+    font-size: 20px;
+    color: gray;
+    border-right: 2px solid gray;
+    border-radius: 2px;
+    padding-right: 5px;
+}
+.new-acc {
+    color: white;
+    text-decoration: none;
+}
+.new-acc:hover {
+    color: #00D0FF;
+    text-decoration: none;
+}
+
+
+.register-wrapper {
+    width: 400px;
+    margin: 0 auto;
+/*    border: 2px solid red;
+*/    height: 250px;
+}
+
+.register {
+    height: 45px;
+    margin-bottom: 10px;
+}
+.register-span {
+    margin-bottom: 10px;
+    color: white;
 }

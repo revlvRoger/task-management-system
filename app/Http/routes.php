@@ -10,28 +10,24 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('welcome', 'TasksController@welcome');
+Route::get('users', 'UsersController@index');
+Route::get('users/register', 'UsersController@gotoRegister');
 Route::get('index','TasksController@index');
-Route::get('index/add','TasksController@view');
+Route::get('index/add','TasksController@create');
 Route::post('index','TasksController@store');
-
-Route::get('index/{tasks}/delete','TasksController@destroy');
-Route::delete('index/{tasks}', 'TasksController@del');
-
-
-
 Route::get('index/{tasks}','TasksController@show');
-// post resquest...
+Route::get('index/{id}/delete','TasksController@destroy');
+
+
 Route::post('index/{tasks}/notes','NotesController@store');
-
 Route::get('notes/{notes}/edit', 'NotesController@edit');
-//updating the notes id...
 Route::patch('notes/{notes}', 'NotesController@update');
-
-Route::get('notes/{notes}/destroy', 'NotesController@destroy');
-Route::delete('notes/{notes}', 'NotesController@del');
+Route::get('notes/{notes}/delete', 'NotesController@destroy');
 
 
+
+
+// Route::resource('users', 'UsersController');
+// Route::resource('tasks', 'TaskController');
 Route::resource('todos', 'TodoController');
 Route::resource('authors', 'AuthorController');

@@ -3,7 +3,8 @@
 @section('content')
 <div class="row">
     <div class="border col-md-6 col-md-offset-3">
-            <h1 class="todo">To Do</h1>
+{{--         <h3>{{$users->username}}</h3>
+ --}}            <h1 class="todo">To Do</h1>
             <hr>
         <ul class="list-group">
             @foreach($tasks as $task)
@@ -21,7 +22,7 @@
         </ul>
 
 
-            <form action="index/add">
+            <form action="/index/add">
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block btn-lg">Add</button>
                     <br>

@@ -14,7 +14,7 @@
                 <div class="form-group">
                     <input class="form-control" type="date" name="date" required="required" value="{{ $notes->date }}">
                     <br>
-                    <button type="submit" class="btn btn-primary btn-block btn-lg">Update</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Update</button>
                     <br>
                     <br>
                 </div>

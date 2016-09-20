@@ -25,4 +25,8 @@ class Task extends Model
         $newDate = date('l, F d, Y H:i a', strtotime($oldDate));
         return $newDate;
     }
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
